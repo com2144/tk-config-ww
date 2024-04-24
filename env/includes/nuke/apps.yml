@@ -16,6 +16,12 @@ includes:
 - ../common/apps.yml
 - ../common/settings/tk-multi-publish2.yml
 
+################# Custom ####################
+
+nuke.apps.tk-multi-workfiles2:
+  location: "@common.apps.tk-multi-workfiles2.location"
+
+#############################################
 
 nuke.apps.tk-multi-publish2:
   help_url: "@common.apps.tk-multi-publish2.help_url"
