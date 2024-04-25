@@ -15,10 +15,16 @@
 includes:
 - ../common/apps.yml
 - ../common/settings/tk-multi-publish2.yml
+- ../common/settings/tk-multi-workfiles2.yml
 
 ################# Custom ####################
 
 nuke.apps.tk-multi-workfiles2:
+  setup:
+    - '@common.settings.tk-multi-workfiles2'
+    - '@common.settings.tk-multi-workfiles2.launch_at_startup'
+    - '@common.settings.tk-multi-workfiles2.nuke.asset_step'
+    - '@common.settings.tk-multi-workfiles2.nuke.shot_step'
   location: "@common.apps.tk-multi-workfiles2.location"
 
 #############################################
