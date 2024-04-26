@@ -29,7 +29,7 @@ nuke.shot:
 
     tk-multi-loader2: '@nuke.apps.tk-multi-loader2'
 
-    tk-multi-workfiles2: '@common.settings.tk-multi-workfiles2.launch_at_startup'
+    tk-multi-workfiles2: '@common.settings.tk-multi-workfiles2'
 
     tk-multi-shotgunpanel: '@nuke.apps.tk-multi-shotgunpanel'
 
@@ -41,7 +41,6 @@ nuke.shot:
   - {app_instance: tk-multi-workfiles2, name: File Save...}
   run_at_startup:
   - {app_instance: tk-multi-shotgunpanel, name: ''}
-  - {app_instance: tk-multi-workfiles2, name: File Open...}
   launch_builtin_plugins: [basic]
   automatic_context_switch: false
 

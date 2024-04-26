@@ -130,13 +130,13 @@ paths:
         definition: '@shot_root/pub/maya'
     # The location of WIP files
     maya_shot_dev:
-        definition: '@shot_root/dev/maya/{name}.v{version}.{maya_extension}'
+        definition: '@shot_root/dev/maya/{Sequence}_{Shot}_{Task}_{name}.v{version}.{maya_extension}'
     # The location of backups of WIP files
     maya_shot_snapshot:
-        definition: '@shot_root/dev/maya/snapshots/{name}.v{version}.{timestamp}.{maya_extension}'
+        definition: '@shot_root/dev/maya/snapshots/{Sequence}_{Shot}_{Task}_{name}.v{version}.{timestamp}.{maya_extension}'
     # The location of pubed maya files
     maya_shot_pub:
-        definition: '@shot_root/pub/maya/{name}.v{version}.{maya_extension}'
+        definition: '@shot_root/pub/maya/{Sequence}_{Shot}_{Task}_{name}.v{version}.{maya_extension}'
 
     #
     # Nuke
@@ -150,13 +150,13 @@ paths:
         definition: '@shot_root/pub/nuke'
     # The location of WIP script files
     nuke_shot_dev:
-        definition: '@shot_root/dev/nuke/{name}.v{version}.nk'
+        definition: '@shot_root/dev/nuke/{Sequence}_{Shot}_{Task}_{name}.v{version}.nk'
     # The location of backups of WIP files
     nuke_shot_snapshot:
-        definition: '@shot_root/dev/nuke/snapshots/{name}.v{version}.{timestamp}.nk'
+        definition: '@shot_root/dev/nuke/snapshots/{Sequence}_{Shot}_{Task}_{name}.v{version}.{timestamp}.nk'
     # The location of pubed nuke script files
     nuke_shot_pub:
-        definition: '@shot_root/pub/nuke/{name}.v{version}.nk'
+        definition: '@shot_root/pub/nuke/{Sequence}_{Shot}_{Task}_{name}.v{version}.nk'
     # write node outputs
     nuke_shot_render_mono_dpx:
         definition: '@shot_root/dev/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.dpx'
@@ -197,13 +197,13 @@ paths:
         definition: '@asset_root/pub/maya'
     # The location of WIP files
     maya_asset_dev:
-        definition: '@asset_root/dev/maya/{name}.v{version}.{maya_extension}'
+        definition: '@asset_root/dev/maya/{sg_asset_type}_{Asset}_{Step}_{Task}_{name}.v{version}.{maya_extension}'
     # The location of backups of WIP files
     maya_asset_snapshot:
-        definition: '@asset_root/dev/maya/snapshots/{name}.v{version}.{timestamp}.{maya_extension}'
+        definition: '@asset_root/dev/maya/snapshots/{sg_asset_type}_{Asset}_{Step}_{Task}_{name}.v{version}.{timestamp}.{maya_extension}'
     # The location of pubed maya files
     maya_asset_pub:
-        definition: '@asset_root/pub/maya/{name}.v{version}.{maya_extension}'
+        definition: '@asset_root/pub/maya/{sg_asset_type}_{Asset}_{Step}_{Task}_{name}.v{version}.{maya_extension}'
 
 
     #
@@ -228,13 +228,13 @@ paths:
         definition: '@asset_root/review/quickdaily/{Asset}_{name}_{iteration}.mov'
     # The location of WIP script files
     nuke_asset_dev:
-        definition: '@asset_root/dev/nuke/{name}.v{version}.nk'
+        definition: '@asset_root/dev/nuke/{sg_asset_type}_{Asset}_{Step}_{Task}_{name}.v{version}.nk'
     # The location of backups of WIP files
     nuke_asset_snapshot:
-        definition: '@asset_root/dev/nuke/snapshots/{name}.v{version}.{timestamp}.nk'
+        definition: '@asset_root/dev/nuke/snapshots/{sg_asset_type}_{Asset}_{Step}_{Task}_{name}.v{version}.{timestamp}.nk'
     # The location of pubed nuke script files
     nuke_asset_pub:
-        definition: '@asset_root/pub/nuke/{name}.v{version}.nk'
+        definition: '@asset_root/pub/nuke/{sg_asset_type}_{Asset}_{Step}_{Task}_{name}.v{version}.nk'
 
 #
 # The strings section is similar to the paths section - but rather than defining paths

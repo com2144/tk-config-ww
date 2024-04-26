@@ -38,8 +38,6 @@ nuke.asset_step:
   - {app_instance: tk-multi-workfiles2, name: File Save...}
   run_at_startup:
   - {app_instance: tk-multi-shotgunpanel, name: ''}
-  - {app_instance: tk-multi-workfiles2, name: File Open...}
-  - {app_instance: tk-multi-workfiles2, name: File Save...}
   launch_builtin_plugins: [basic]
   automatic_context_switch: false
 
