@@ -14,6 +14,7 @@ type: "shotgun_list_field"
 # the shotgun entity type to connect to
 entity_type: "Asset"
 
+
 # switch this to true if you only want to make folders for
 # values that are being used. Note that evaluating this is
 # expensive and may potentially slow down folder creation.

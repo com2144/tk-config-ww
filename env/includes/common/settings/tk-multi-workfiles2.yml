@@ -67,8 +67,8 @@ common.settings.tk-multi-workfiles2.launch_at_startup:
 common.settings.tk-multi-workfiles2.nuke.asset_step:
   template_publish: nuke_asset_pub
   template_publish_area: asset_pub_area_nuke
-  template_work: nuke_asset_work
-  template_work_area: asset_work_area_nuke
+  template_work: nuke_asset_dev
+  template_work_area: asset_dev_area_nuke
   entities:
   - caption: Assets
     entity_type: Asset
@@ -94,8 +94,8 @@ common.settings.tk-multi-workfiles2.nuke.asset_step:
 common.settings.tk-multi-workfiles2.nuke.shot_step:
   template_publish: nuke_shot_pub
   template_publish_area: shot_pub_area_nuke
-  template_work: nuke_shot_work
-  template_work_area: shot_work_area_nuke
+  template_work: nuke_shot_dev
+  template_work_area: shot_dev_area_nuke
   entities:
   - caption: Assets
     entity_type: Asset
@@ -125,8 +125,8 @@ common.settings.tk-multi-workfiles2.nuke.shot_step:
 common.settings.tk-multi-workfiles2.maya.asset_step:
   template_publish: maya_asset_pub
   template_publish_area: asset_pub_area_maya
-  template_work: maya_asset_work
-  template_work_area: asset_work_area_maya
+  template_work: maya_asset_dev
+  template_work_area: asset_dev_area_maya
   entities:
   - caption: Assets
     entity_type: Asset
@@ -152,8 +152,8 @@ common.settings.tk-multi-workfiles2.maya.asset_step:
 common.settings.tk-multi-workfiles2.maya.shot_step:
   template_publish: maya_shot_pub
   template_publish_area: shot_pub_area_maya
-  template_work: maya_shot_work
-  template_work_area: shot_work_area_maya
+  template_work: maya_shot_dev
+  template_work_area: shot_dev_area_maya
   entities:
   - caption: Assets
     entity_type: Asset

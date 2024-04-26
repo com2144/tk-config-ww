@@ -19,4 +19,4 @@ name: "content"
 # three fields: path, relation and values
 # (this is std shotgun API syntax)
 # any values starting with $ are resolved into path objects
-filters: [ { "path": "entity", "relation": "is", "values": [ "$asset" ] } ]
+#filters: [ { "path": "short_name", "relation": "in", "values": [ "$step" ] } ]
