@@ -1,0 +1,14 @@
+# .gitignore
+
+# Personal files
+/core/roots.yml
+/core/pipeline_configuration.yml
+/core/install_location.yml
+/core/shotgun.yml
+/core/interpreter_Darwin.cfg
+/core/interpreter_Windows.cfg
+/core/interpreter_Linux.cfg
+
+# python Cache files
+__pycache__
+*.pyc
