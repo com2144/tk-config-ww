@@ -1,6 +1,7 @@
 # .gitignore
 
 # Personal files
+
 /core/roots.yml
 /core/pipeline_configuration.yml
 /core/install_location.yml
