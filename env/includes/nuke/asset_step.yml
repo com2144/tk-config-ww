@@ -15,6 +15,7 @@
 includes:
 - ../common/engines.yml
 - ../common/apps.yml
+- ../common/settings/tk-multi-workfiles2.yml
 - apps.yml
 
 nuke.asset_step:
@@ -25,12 +26,16 @@ nuke.asset_step:
 
     tk-multi-loader2: '@nuke.apps.tk-multi-loader2'
 
+    tk-multi-workfiles2: '@common.settings.tk-multi-workfiles2.nuke.asset_step'
+
     tk-multi-shotgunpanel: '@nuke.apps.tk-multi-shotgunpanel'
 
     tk-nuke-quickreview: '@nuke.apps.tk-nuke-quickreview'
 
   location: "@common.engines.tk-nuke.location"
-  menu_favourites: []
+  menu_favourites:
+  - {app_instance: tk-multi-workfiles2, name: File Open...}
+  - {app_instance: tk-multi-workfiles2, name: File Save...}
   run_at_startup:
   - {app_instance: tk-multi-shotgunpanel, name: ''}
   launch_builtin_plugins: [basic]

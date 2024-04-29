@@ -1,0 +1,179 @@
+# Copyright (c) 2017 Shotgun Software Inc.
+#
+# CONFIDENTIAL AND PROPRIETARY
+#
+# This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit
+# Source Code License included in this distribution package. See LICENSE.
+# By accessing, using, copying or modifying this work you indicate your
+# agreement to the Shotgun Pipeline Toolkit Source Code License. All rights
+# not expressly granted therein are reserved by Shotgun Software Inc.
+
+# tk-multi-workfiles2.yml
+
+includes:
+- ../apps.yml
+
+common.settings.tk-multi-workfiles2: &settings_tk-multi-workfiles2
+  entities:
+  - caption: Assets
+    entity_type: Asset
+    hierarchy: [sg_asset_type, code]
+    filters:
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Shots
+    entity_type: Shot
+    filters:
+    hierarchy: [sg_sequence, code]
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  location: "@common.apps.tk-multi-workfiles2.location"
+
+# launches at startup.
+common.settings.tk-multi-workfiles2.launch_at_startup:
+  launch_at_startup: true
+  entities:
+  - caption: Assets
+    entity_type: Asset
+    hierarchy: [sg_asset_type, code]
+    filters:
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Shots
+    entity_type: Shot
+    filters:
+    hierarchy: [sg_sequence, code]
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  location: "@common.apps.tk-multi-workfiles2.location"
+
+################################################################################
+
+# ---- nuke
+
+# asset_step
+common.settings.tk-multi-workfiles2.nuke.asset_step:
+  template_publish: nuke_asset_pub
+  template_publish_area: asset_pub_area_nuke
+  template_work: nuke_asset_dev
+  template_work_area: asset_dev_area_nuke
+  entities:
+  - caption: Assets
+    entity_type: Asset
+    hierarchy: [sg_asset_type, code]
+    filters:
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Shots
+    entity_type: Shot
+    filters:
+    hierarchy: [sg_sequence, code]
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  location: "@common.apps.tk-multi-workfiles2.location"
+
+# shot_step
+common.settings.tk-multi-workfiles2.nuke.shot_step:
+  template_publish: nuke_shot_pub
+  template_publish_area: shot_pub_area_nuke
+  template_work: nuke_shot_dev
+  template_work_area: shot_dev_area_nuke
+  entities:
+  - caption: Assets
+    entity_type: Asset
+    hierarchy: [sg_asset_type, code]
+    filters:
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Shots
+    entity_type: Shot
+    filters:
+    hierarchy: [sg_sequence, code]
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  location: "@common.apps.tk-multi-workfiles2.location"
+
+################################################################################
+
+# ---- Maya
+
+# asset_step
+common.settings.tk-multi-workfiles2.maya.asset_step:
+  template_publish: maya_asset_pub
+  template_publish_area: asset_pub_area_maya
+  template_work: maya_asset_dev
+  template_work_area: asset_dev_area_maya
+  entities:
+  - caption: Assets
+    entity_type: Asset
+    hierarchy: [sg_asset_type, code]
+    filters:
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Shots
+    entity_type: Shot
+    filters:
+    hierarchy: [sg_sequence, code]
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  location: "@common.apps.tk-multi-workfiles2.location"
+
+# shot_step
+common.settings.tk-multi-workfiles2.maya.shot_step:
+  template_publish: maya_shot_pub
+  template_publish_area: shot_pub_area_maya
+  template_work: maya_shot_dev
+  template_work_area: shot_dev_area_maya
+  entities:
+  - caption: Assets
+    entity_type: Asset
+    hierarchy: [sg_asset_type, code]
+    filters:
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  - caption: Shots
+    entity_type: Shot
+    filters:
+    hierarchy: [sg_sequence, code]
+    sub_hierarchy:
+      entity_type: Task
+      filters:
+      link_field: entity
+      hierarchy: [step]
+  location: '@common.apps.tk-multi-workfiles2.location'
+
+################################################################################
+

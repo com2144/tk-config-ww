@@ -1,4 +1,4 @@
-# Copyright (c) 2016 Shotgun Software Inc.
+# Copyright (c) 2015 Shotgun Software Inc.
 #
 # CONFIDENTIAL AND PROPRIETARY
 #
@@ -8,8 +8,8 @@
 # agreement to the Shotgun Pipeline Toolkit Source Code License. All rights
 # not expressly granted therein are reserved by Shotgun Software Inc.
 
-# this file defines all the different disk locations that this config uses.
-# these paths can be altered at project creation time to ensure that they map
-# to the correct location.
+# the type of dynamic content
+type: "static"
 
-# the zero configuration setup does not define any storage points.
+# defer creation and only create this folder when Nuke starts
+defer_creation: "tk-nuke"
