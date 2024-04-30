@@ -12,19 +12,22 @@
 App Launch Hook
 
 This hook is executed to launch the applications.
+
+2024-04-30: Update to execute the app with rez-env.
 """
 
 import os
-import tank
+import sgtk
 
+Hook = sgtk.get_hook_baseclass()
 
-class AppLaunch(tank.Hook):
+class AppLaunch(Hook):
     """
     Hook to run an application.
     """
-
+    
     def execute(
-        self, app_path, app_args, version, engine_name, software_entity=None, **kwargs
+        self, app_path, app_args, version, engine_name, software_entity=None,  **kwargs
     ):
         """
         The execute function of the hook will be called to start the required application
@@ -40,23 +43,27 @@ class AppLaunch(tank.Hook):
 
         :returns: (dict) The two valid keys are 'command' (str) and 'return_code' (int).
         """
+        sg = sgtk.platform.current_engine().shotgun  #shotgun_api instance
+        project_id = sgtk.platform.current_engine().context.project["id"]
 
-        if tank.util.is_linux():
-            # on linux, we just run the executable directly
-            program = app_path.split("/")[-1]
-            if program == "Nuke13.2":
-                version = "13.2.2"
-            elif program == "Nuke13.0":
-                version = "13.0.1"
-            elif program == "Nuke12.2":
-                version = "12.2.2"
-            elif program == "Nuke11.2":
-                version = "11.2.5"
-            cmd = "rez-env nuke-%s -- %s %s &" % (version, program, app_args)
+        fields = ["sg_rez_env", "sg_rez_excute", "sg_dcc_version"]
+        software_info = sg.find("Software", [["projects", "is", {"type": "Project", "id": project_id}]], fields)
+        if not software_info:
+            print("No software Entity found")
+            return {"command": "No software Entity found", "return_code": 1}
+        
+        for software in software_info:
+            rez_dcc_version = software.get("sg_dcc_version")
+            if rez_dcc_version == version:
+                rez_env = software.get("sg_rez_env")
+                rez_execute = software.get("sg_rez_excute")
+                break
+            
+        if sgtk.util.is_linux():
+            cmd = "rez-env %s -- %s %s &" % (rez_env, rez_execute, app_args)
             #cmd = "%s %s &" % (app_path, app_args)
-            print(cmd)
 
-        elif tank.util.is_macos():
+        elif sgtk.util.is_macos():
             # If we're on OS X, then we have two possibilities: we can be asked
             # to launch an application bundle using the "open" command, or we
             # might have been given an executable that we need to treat like
