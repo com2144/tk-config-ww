@@ -23,6 +23,8 @@ includes:
 - includes/aftereffects/shot.yml
 - includes/3dsmax/shot.yml
 - includes/shotgun/all.yml
+- includes/katana/shot.yml
+- includes/clarisse/shot.yml
 
 engines:
   tk-desktop2: '@desktop2.all'
@@ -37,3 +39,5 @@ engines:
   tk-3dsmaxplus: '@3dsmaxplus.shot'
   tk-3dsmax: '@3dsmax.shot'
   tk-shotgun: '@shotgun.all'
+  tk-katana: '@katana.shot'
+  tk-clarisse: '@clarisse.shot'

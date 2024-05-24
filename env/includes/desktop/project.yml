@@ -37,6 +37,9 @@ desktop.project:
       hook_before_register_command: "{config}/tk-multi-launchapp/before_register_command.py"
       location: "@common.apps.tk-multi-launchapp.location"
 
+    tk-desktop-timecard:
+      location: '@common.apps.tk-desktop-timecard.location'
+
   collapse_rules:
   - {button_label: $app, match: Launch $app, menu_label: None}
   default_group: Studio
@@ -52,7 +55,9 @@ desktop.project:
     - '*Photoshop*'
     - '*After*'
     - '*Effects*'
+    - '*Katana*'
     - 'CC*'
+    - '*Clarisse*'
     name: Creative Tools
   - matches:
     - '*Hiero*'

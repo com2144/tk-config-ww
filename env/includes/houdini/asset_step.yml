@@ -15,22 +15,17 @@
 includes:
 - ../common/engines.yml
 - ../common/apps.yml
+- ../common/settings/tk-multi-workfiles2.yml
 - apps.yml
 
 
 houdini.asset_step:
   apps:
-    tk-multi-about: '@common.apps.tk-multi-about'
-
-    tk-multi-publish2: '@houdini.apps.tk-multi-publish2'
-
-    tk-multi-loader2: '@houdini.apps.tk-multi-loader2'
-
-    tk-multi-shotgunpanel: '@houdini.apps.tk-multi-shotgunpanel'
-
-  location: "@common.engines.tk-houdini.location"
-  menu_favourites: []
-  run_at_startup:
-  - {app_instance: tk-multi-shotgunpanel, name: ''}
-  launch_builtin_plugins: [basic]
-  automatic_context_switch: false
+    tk-multi-loader2: "@houdini.apps.tk-multi-loader2"
+    tk-multi-publish2: "@houdini.apps.tk-multi-publish2"
+    tk-multi-workfiles2: "@common.settings.tk-multi-workfiles2.houdini.asset_step"
+  menu_favourites:
+  - {app_instance: tk-multi-workfiles2, name: File Open...}
+  - {app_instance: tk-multi-workfiles2, name: File Save...}
+  - {app_instance: tk-multi-publish2, name: Publish...}
+  location: '@common.engines.tk-houdini.location'

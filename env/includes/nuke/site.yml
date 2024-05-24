@@ -20,8 +20,6 @@ includes:
 
 nuke.site:
   apps:
-    tk-multi-about: '@common.apps.tk-multi-about'
-
     tk-multi-loader2:
       action_mappings:
         Alembic Cache: [read_node]
@@ -53,12 +51,7 @@ nuke.site:
       publish_filters: [["sg_status_list", "is_not", null]]
       location: "@common.apps.tk-multi-loader2.location"
 
-    tk-multi-shotgunpanel: '@nuke.apps.tk-multi-shotgunpanel'
-
-
   location: "@common.engines.tk-nuke.location"
   automatic_context_switch: false
   menu_favourites: []
-  run_at_startup:
-  - {app_instance: tk-multi-shotgunpanel, name: ''}
   launch_builtin_plugins: [basic]
