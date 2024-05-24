@@ -26,6 +26,9 @@ includes:
 - includes/alias/project.yml
 - includes/vred/project.yml
 - includes/shotgun/all.yml
+- includes/mari/project.yml
+- includes/katana/project.yml
+- includes/clarisse/project.yml
 
 engines:
   tk-houdini: '@houdini.project'
@@ -43,3 +46,6 @@ engines:
   tk-flame: '@flame.project'
   tk-alias: '@alias.project'
   tk-vred: '@vred.project'
+  tk-mari: '@mari.project'
+  tk-katana: '@katana.project'
+  tk-clarisse: '@clarisse.project'

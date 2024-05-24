@@ -12,6 +12,14 @@
 # all the frameworks required by the config are defined here.
 
 frameworks:
+############### CUSTOM ################
+  tk-framework-widget_v0.2.x:
+    location:
+      version: v0.2.8
+      type: app_store
+      name: tk-framework-widget
+# added for tk-mari-projectmanager
+#######################################
   tk-framework-adobe_v1.x.x:
     location:
       type: app_store

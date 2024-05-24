@@ -8,6 +8,9 @@
 # agreement to the Shotgun Pipeline Toolkit Source Code License. All rights
 # not expressly granted therein are reserved by Shotgun Software Inc.
 
+includes:
+- ../apps.yml
+
 common.settings.tk-multi-publish2.publish_file:
   name: Publish to Flow Production Tracking
   hook: "{self}/publish_file.py"
@@ -17,3 +20,5 @@ common.settings.tk-multi-publish2.upload_version:
   name: Upload for review
   hook: "{self}/upload_version.py"
   settings: {}
+
+################################################################################

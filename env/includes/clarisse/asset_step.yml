@@ -1,0 +1,29 @@
+# Copyright (c) 2024 Shotgun Software Inc.
+#
+# CONFIDENTIAL AND PROPRIETARY
+#
+# This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit
+# Source Code License included in this distribution package. See LICENSE.
+# By accessing, using, copying or modifying this work you indicate your
+# agreement to the Shotgun Pipeline Toolkit Source Code License. All rights
+# not expressly granted therein are reserved by Shotgun Software Inc.
+#
+
+# this configuration defines the behavior of the Clarisse Integration when it
+# is running in its asset_step level configuration
+
+includes:
+- ../common/engines.yml
+- ../common/apps.yml
+- ../common/settings/tk-multi-workfiles2.yml
+- apps.yml
+
+clarisse.asset_step:
+  apps:
+    tk-multi-loader2: "@clarisse.apps.tk-multi-loader2"
+    tk-multi-publish2: "@clarisse.apps.tk-multi-publish2.asset_step"
+    tk-multi-workfiles2: '@common.settings.tk-multi-workfiles2.clarisse.asset_step'
+  menu_favourites:
+  - {app_instance: tk-multi-workfiles2, name: File Open...}
+  - {app_instance: tk-multi-workfiles2, name: File Save...}
+  location: "@common.engines.tk-clarisse.location"

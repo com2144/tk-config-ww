@@ -11,6 +11,28 @@
 
 # locations for common engines
 
+##################### CUSTOM #####################
+
+common.engines.tk-katana.location:
+  type: dev
+  name: tk-katana
+  version: v0.0.1
+  path: "/RAPA/tk_custom_engines/tk-katana/v0.0.1"
+
+common.engines.tk-clarisse.location:
+  type: dev
+  name: tk-clarisse
+  version: v0.0.1
+  path: "/RAPA/tk_custom_engines/tk-clarisse/v0.0.1"
+
+common.engines.tk-mari.location:
+  type: dev
+  name: tk-mari
+  version: v1.4.1
+  path: "/RAPA/tk_custom_engines/tk-mari/v1.4.1"
+
+##################################################
+
 # 3dsMax using the tk-3dsmaxplus engine
 common.engines.tk-3dsmaxplus.location:
   type: app_store
@@ -19,11 +41,11 @@ common.engines.tk-3dsmaxplus.location:
 common.engines.tk-3dsmax.location:
   type: app_store
   name: tk-3dsmax
-  version: v1.3.0
+  version: v1.3.2
 common.engines.tk-houdini.location:
   type: app_store
   name: tk-houdini
-  version: v1.9.0
+  version: v1.9.1
 common.engines.tk-maya.location:
   type: app_store
   name: tk-maya
@@ -31,7 +53,8 @@ common.engines.tk-maya.location:
 common.engines.tk-nuke.location:
   type: app_store
   name: tk-nuke
-  version: v0.15.0
+  version: v0.14.4
+  #Valid version
 common.engines.tk-photoshopcc.location:
   type: app_store
   name: tk-photoshopcc

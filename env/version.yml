@@ -30,6 +30,9 @@ includes:
 - includes/alias/project.yml
 - includes/shotgun/version.yml
 - includes/vred/project.yml
+- includes/katana/project.yml
+- includes/mari/project.yml
+- includes/clarisse/project.yml
 
 engines:
   tk-3dsmax: '@3dsmax.project'
@@ -47,3 +50,6 @@ engines:
   tk-shell: '@shell.project'
   tk-shotgun: '@shotgun.version'
   tk-vred: '@vred.project'
+  tk-katana: '@katana.project'
+  tk-mari: '@mari.project'
+  tk-clarisse: '@clarisse.project'

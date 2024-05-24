@@ -25,6 +25,9 @@ includes:
 - includes/alias/asset_step.yml
 - includes/vred/asset_step.yml
 - includes/shotgun/all.yml
+- includes/mari/asset_step.yml
+- includes/katana/asset_step.yml
+- includes/clarisse/asset_step.yml
 
 engines:
   tk-desktop2: '@desktop2.all'
@@ -41,3 +44,6 @@ engines:
   tk-alias: '@alias.asset_step'
   tk-vred: '@vred.asset_step'
   tk-shotgun: '@shotgun.all'
+  tk-katana: '@katana.asset_step'
+  tk-mari: '@mari.asset_step'
+  tk-clarisse: '@clarisse.asset_step'

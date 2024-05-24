@@ -43,18 +43,24 @@ class AppLaunch(Hook):
 
         :returns: (dict) The two valid keys are 'command' (str) and 'return_code' (int).
         """
-        sg = sgtk.platform.current_engine().shotgun  #shotgun_api instance
+        
+        # get shotgun connection from current engine
+        sg = sgtk.platform.current_engine().shotgun
+        
+        # get project id from current engine
         project_id = sgtk.platform.current_engine().context.project["id"]
 
+        # get the rez env and execute path for the version of the software
         fields = ["sg_rez_env", "sg_rez_excute", "sg_dcc_version"]
         software_info = sg.find("Software", [["projects", "is", {"type": "Project", "id": project_id}]], fields)
+        
+        # check software_info is available
         if not software_info:
             print("No software Entity found")
             return {"command": "No software Entity found", "return_code": 1}
         
         for software in software_info:
-            rez_dcc_version = software.get("sg_dcc_version")
-            if rez_dcc_version == version:
+            if software.get("sg_dcc_version") == version:
                 rez_env = software.get("sg_rez_env")
                 rez_execute = software.get("sg_rez_excute")
                 break

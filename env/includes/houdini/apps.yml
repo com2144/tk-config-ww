@@ -15,7 +15,14 @@
 includes:
 - ../common/apps.yml
 - ../common/settings/tk-multi-publish2.yml
+- ../common/settings/tk-multi-workfiles2.yml
 
+########################### Custom #############################
+
+houdini.apps.tk-multi-workfiles2:
+  location: "@common.apps.tk-multi-workfiles2.location"
+
+################################################################
 
 houdini.apps.tk-multi-publish2:
   help_url: "@common.apps.tk-multi-publish2.help_url"
@@ -58,38 +65,3 @@ houdini.apps.tk-multi-loader2:
     # this filter means only the latest publish will be displayed.
     publish_filters: [["sg_status_list", "is_not", null]]
     location: "@common.apps.tk-multi-loader2.location"
-
-houdini.apps.tk-multi-shotgunpanel:
-    actions_hook: '{self}/general_actions.py:{self}/tk-houdini_actions.py'
-    action_mappings:
-      Note:
-      - actions: [ note_to_ip, note_to_closed ]
-        filters: { }
-      PublishedFile:
-      - actions: [import]
-        filters: {published_file_type: Alembic Cache}
-      - actions: [merge]
-        filters: {published_file_type: Houdini Scene}
-      - actions: [file_cop]
-        filters: {published_file_type: Image}
-      - actions: [file_cop]
-        filters: {published_file_type: Photoshop Image}
-      - actions: [file_cop]
-        filters: {published_file_type: Rendered Image}
-      - actions: [file_cop]
-        filters: {published_file_type: Texture}
-      - actions: [publish_clipboard]
-        filters: {}
-      Task:
-      - actions:
-        - assign_task
-        - task_to_ip
-        filters: {}
-      Version:
-      - actions:
-        - quicktime_clipboard
-        - sequence_clipboard
-        - add_to_playlist
-        filters: {}
-    enable_context_switch: true
-    location: "@common.apps.tk-multi-shotgunpanel.location"

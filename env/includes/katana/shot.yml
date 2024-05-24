@@ -1,0 +1,26 @@
+# Copyright (c) 2017 Shotgun Software Inc.
+#
+# CONFIDENTIAL AND PROPRIETARY
+#
+# This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit
+# Source Code License included in this distribution package. See LICENSE.
+# By accessing, using, copying or modifying this work you indicate your
+# agreement to the Shotgun Pipeline Toolkit Source Code License. All rights
+# not expressly granted therein are reserved by Shotgun Software Inc.
+#
+
+# this configuration defines the behavior of the katana Integration when it
+# is running in its shot level configuration
+
+includes:
+- ../common/engines.yml
+- ../common/apps.yml
+- ../common/settings/tk-multi-workfiles2.yml
+- apps.yml
+
+katana.shot:
+  apps:
+    tk-multi-workfiles2: '@common.settings.tk-multi-workfiles2.katana'
+  menu_favourites:
+  - {app_instance: tk-multi-workfiles2, name: File Open...}
+  location: "@common.engines.tk-katana.location"
